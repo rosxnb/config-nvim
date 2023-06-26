@@ -1,7 +1,7 @@
 return {
     "rebelot/kanagawa.nvim",
     lazy=true,
-    config = {
+    opts = {
         compile = false,             -- enable compiling the colorscheme
         undercurl = true,            -- enable undercurls
         commentStyle = { italic = true },
