@@ -1,6 +1,0 @@
-require "rosxnb.remaps"
-require "rosxnb.options"
-require "rosxnb.lazy"
-require "rosxnb.colorscheme"
-require "rosxnb.autocommands"
-require "rosxnb.lsp"

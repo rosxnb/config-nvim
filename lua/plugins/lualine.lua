@@ -1,22 +1,3 @@
-local function isempty(s)
-	return s == nil or s == ""
-end
-
-local get_file_icon = function()
-	local filename = vim.fn.expand("%:t")
-	local extension = vim.fn.expand("%:e")
-
-	if not isempty(filename) then
-		local file_icon = require("nvim-web-devicons").get_icon(filename, extension, { default = true })
-
-		if isempty(file_icon) then
-			file_icon = ""
-		end
-
-		return file_icon
-	end
-end
-
 local diagnostic_icons = {
 	error = " ",
 	warn = " ",
@@ -30,28 +11,11 @@ return {
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
 		opts = function()
-			local navic_stat = {
-				function()
-					local loc = require("nvim-navic").get_location()
-					if loc ~= "" then
-						return "〉" .. loc
-					end
-
-					return loc
-				end,
-				cond = function()
-					return require("nvim-navic").is_available()
-				end,
-				color = { bg = "NONE" },
-			}
-
 			return {
 				options = {
 					theme = "auto",
 					globalstatus = true,
 					disabled_filetypes = { statusline = { "dashboard", "alpha" } },
-					-- component_separators = { left = "", right = "" },
-					-- section_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_a = { "mode" },
@@ -84,30 +48,6 @@ return {
 						end,
 					},
 				},
-				winbar = {
-					lualine_a = {},
-					lualine_b = {},
-					lualine_c = {
-						{ get_file_icon, padding = { left = 2, right = 1 } },
-						{ "filename", path = 1, color = { bg = "NONE" } },
-						navic_stat,
-					},
-					lualine_x = {},
-					lualine_y = {},
-					lualine_z = {},
-				},
-				inactive_winbar = {
-					lualine_a = {},
-					lualine_b = {},
-					lualine_c = {
-						{ get_file_icon, padding = { left = 2, right = 1 } },
-						{ "filename", path = 1, color = { bg = "NONE" } },
-					},
-					lualine_x = {},
-					lualine_y = {},
-					lualine_z = {},
-				},
-				tabline = {},
 				extensions = { "neo-tree", "lazy" },
 			}
 		end,
@@ -126,7 +66,7 @@ return {
 		end,
 		opts = function()
 			return {
-				separator = "  ",
+				separator = "  ",
 				highlight = true,
 				depth_limit = 0,
 				epth_limit_indicator = "..",
