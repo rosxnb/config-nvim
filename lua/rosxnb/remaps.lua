@@ -32,7 +32,7 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
 -- splitting window
-keymap("n", "<leader>|", "<C-w>v", opts)
+keymap("n", "<leader>\\", "<C-w>v", opts)
 keymap("n", "<leader>-", "<C-w>s", opts)
 keymap("n", "<leader>=", "<C-w>=", opts)
 keymap("n", "<leader>x", ":close<CR>", opts)

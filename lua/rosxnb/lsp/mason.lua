@@ -1,6 +1,10 @@
 local servers = {
+    "vimls",
 	"lua_ls",
     "clangd",
+    "html",
+    "cssls",
+    "tsserver",
 }
 
 local settings = {
