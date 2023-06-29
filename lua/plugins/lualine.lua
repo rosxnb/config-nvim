@@ -3,7 +3,7 @@ local function isempty(s)
 end
 
 local get_file_icon = function()
-	local filename  vim.fn.expand("%:t")
+	local filename = vim.fn.expand("%:t")
 	local extension = vim.fn.expand("%:e")
 
 	if not isempty(filename) then
@@ -22,21 +22,6 @@ local diagnostic_icons = {
 	warn = " ",
 	hint = " ",
 	info = " ",
-}
-
-local winbar_filetype_exclude = {
-    "help",
-    "startify",
-    "dashboard",
-    "packer",
-    "neogitstatus",
-    "NvimTree",
-    "Trouble",
-    "alpha",
-    "lir",
-    "Outline",
-    "spectre_panel",
-    "toggleterm",
 }
 
 return {
