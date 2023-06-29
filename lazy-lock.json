@@ -16,6 +16,7 @@
   "luasnip": { "branch": "master", "commit": "c7984d1cca3d8615e4daefc196597872a0b8d590" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "4f1c72767bec31397d59554f84096909b2887195" },
   "mason.nvim": { "branch": "main", "commit": "b68d3be4b664671002221d43c82e74a0f1006b26" },
+  "maximize.nvim": { "branch": "master", "commit": "97bfc171775c404396f8248776347ebe64474fe7" },
   "mini.pairs": { "branch": "main", "commit": "963b800d0524eadd297199207011b98684205ada" },
   "mini.surround": { "branch": "main", "commit": "14f418209ecf52d1a8de9d091eb6bd63c31a4e01" },
   "null-ls.nvim": { "branch": "main", "commit": "b919452c84e461c21a79185bef90c96e1cfecff9" },
