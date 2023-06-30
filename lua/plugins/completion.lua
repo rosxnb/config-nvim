@@ -155,6 +155,7 @@ return {
 					},
 					completion = {
 						border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+                        winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 					},
 				},
 				experimental = {
