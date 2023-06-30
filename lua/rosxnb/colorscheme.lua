@@ -1,5 +1,5 @@
-local colorscheme = "kanagawa"
--- local colorscheme = "darkplus"
+-- local colorscheme = "kanagawa"
+local colorscheme = "darkplus"
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
