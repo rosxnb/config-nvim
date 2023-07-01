@@ -1,10 +1,10 @@
 local servers = {
-    "vimls",
 	"lua_ls",
     "clangd",
     "html",
     "cssls",
     "tsserver",
+    "pyright",
 }
 
 local settings = {
@@ -33,10 +33,12 @@ end
 
 local opts = {}
 
+local onatch = require("rosxnb.lsp.handlers").on_attach
+local caplty = require("rosxnb.lsp.handlers").capabilities
 for _, server in pairs(servers) do
 	opts = {
-		on_attach = require("rosxnb.lsp.handlers").on_attach,
-		capabilities = require("rosxnb.lsp.handlers").capabilities,
+		on_attach = onatch,
+		capabilities = caplty,
 	}
 
 	server = vim.split(server, "@")[1]
@@ -46,5 +48,5 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-	lspconfig[server].setup(opts)
+    lspconfig[server].setup(opts)
 end
