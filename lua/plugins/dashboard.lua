@@ -1,4 +1,4 @@
-local github_contact = "https://github.com/rosxnb/"
+local github_contact = "👻 https://github.com/rosxnb/"
 
 return {
 	"goolord/alpha-nvim",
@@ -6,7 +6,6 @@ return {
 	opts = function()
 		local dashboard = require("alpha.themes.dashboard")
 		local logo = [[
-
 
 
 
@@ -58,9 +57,10 @@ return {
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "LazyVimStarted",
 			callback = function()
-				local stats = require("lazy").stats()
-				local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-				dashboard.section.footer.val = "\t\t" .. github_contact .. "\n" ..  "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
+				-- local stats = require("lazy").stats()
+				-- local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+				-- dashboard.section.footer.val = "       " .. github_contact .. "\n" ..  "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
+				dashboard.section.footer.val = github_contact
 				pcall(vim.cmd.AlphaRedraw)
 			end,
 		})
