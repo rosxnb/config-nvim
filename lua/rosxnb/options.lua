@@ -35,6 +35,8 @@ local options = {
 	undofile = true, -- enable persistent undo
 	writebackup = false, -- file not allowed to be edited by another program if in use
 	background = "dark",
+    autoread = true,
+    cindent = true,
 }
 
 for key, value in pairs(options) do

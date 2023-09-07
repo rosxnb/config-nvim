@@ -5,6 +5,7 @@ local servers = {
     "cssls",
     "tsserver",
     "pyright",
+    "omnisharp",
 }
 
 local settings = {

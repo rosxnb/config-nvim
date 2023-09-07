@@ -28,5 +28,8 @@ vim.cmd [[
     autocmd ColorScheme * highlight NormalNC guibg=none
     autocmd ColorScheme * highlight NonText guibg=none
     autocmd ColorScheme * highlight SignColumn guibg=none
-  augroup END
+  augroup end
+
+  au BufReadPost *.metal set syntax=cpp
+
 ]]

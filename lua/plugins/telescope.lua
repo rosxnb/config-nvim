@@ -9,7 +9,7 @@ return {
 		{ "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
 		{ "<leader>/", Util.telescope("live_grep"), desc = "Grep (root dir)" },
 		{ "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
-		{ "<leader>f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find Files (root dir)" },
+		{ "<leader>f", "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find Files (root dir)" },
 		-- find
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 		{ "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },

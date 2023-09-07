@@ -72,7 +72,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	if client.name == "lua_ls" then
+	if client.name == "lua_ls" or client.name == "clangd" or client.name == "omnisharp" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
