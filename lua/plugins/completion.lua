@@ -51,17 +51,17 @@ return {
 			delete_check_events = "textchanged",
 		},
         -- stylua: ignore
-        keys = {
-            {
-                "<tab>",
-                function()
-                    return require("luasnip").jumpable(1) and "<plug>luasnip-jump-next" or "<tab>"
-                end,
-                expr = true, silent = true, mode = "i",
-            },
-            { "<tab>", function() require("luasnip").jump(1) end, mode = "s" },
-            { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
-        },
+        -- keys = {
+        --     {
+        --         "<tab>",
+        --         function()
+        --             return require("luasnip").jumpable(1) and "<plug>luasnip-jump-next" or "<tab>"
+        --         end,
+        --         expr = true, silent = true, mode = "i",
+        --     },
+        --     { "<tab>", function() require("luasnip").jump(1) end, mode = "s" },
+        --     { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
+        -- },
 	},
 
 	-- auto completion
@@ -102,26 +102,26 @@ return {
 					-- accept currently selected item. If none selected, `select` first item.
 					-- set `select` to `false` to only confirm explicitly selected items.
 					["<cr>"] = cmp.mapping.confirm({ select = true }),
-					["<tab>"] = cmp.mapping(function(fallback)
-						if cmp.visible() then
-							cmp.select_next_item()
-						else
-							fallback()
-						end
-					end, {
-						"i",
-						"s",
-					}),
-					["<s-tab>"] = cmp.mapping(function(fallback)
-						if cmp.visible() then
-							cmp.select_prev_item()
-						else
-							fallback()
-						end
-					end, {
-						"i",
-						"s",
-					}),
+					-- ["<tab>"] = cmp.mapping(function(fallback)
+					-- 	if cmp.visible() then
+					-- 		cmp.select_next_item()
+					-- 	else
+					-- 		fallback()
+					-- 	end
+					-- end, {
+					-- 	"i",
+					-- 	"s",
+					-- }),
+					-- ["<s-tab>"] = cmp.mapping(function(fallback)
+					-- 	if cmp.visible() then
+					-- 		cmp.select_prev_item()
+					-- 	else
+					-- 		fallback()
+					-- 	end
+					-- end, {
+					-- 	"i",
+					-- 	"s",
+					-- }),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
