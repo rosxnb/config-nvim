@@ -71,12 +71,12 @@ function M.config()
             format = function(entry, vim_item)
                 vim_item.kind = icons.kind[vim_item.kind]
                 vim_item.menu = ({
-                    nvim_lsp = "",
-                    nvim_lua = "",
-                    luasnip = "",
-                    path = "",
-                    emoji = "",
-                    buffer = "",
+                    nvim_lsp = "[nvim-lsp]",
+                    nvim_lua = "[nvim-lua]",
+                    luasnip = "[luasnip]",
+                    path = "[path]",
+                    emoji = "[emoji]",
+                    buffer = "[buffer]",
                 })[entry.source.name]
 
                 if entry.source.name == "emoji" then
@@ -93,15 +93,13 @@ function M.config()
             end,
         },
         sources = {
-            { name = "copilot" },
+            { name = "nvim_lua" },
             { name = "nvim_lsp" },
+            { name = "path" },
+            { name = "buffer" },
             { name = "luasnip" },
             { name = "cmp_tabnine" },
-            { name = "nvim_lua" },
-            { name = "path" },
-            { name = "calc" },
             { name = "emoji" },
-            { name = "buffer" },
         },
         confirm_opts = {
             behavior = cmp.ConfirmBehavior.Replace,
