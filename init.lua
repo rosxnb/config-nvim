@@ -22,7 +22,6 @@ spec "rosxnb.indent"
 
 spec "rosxnb.alpha"
 spec "rosxnb.maximizer"
-spec "rosxnb.ufo"
 spec "rosxnb.gitsigns"
 
 require "rosxnb.lazy"
